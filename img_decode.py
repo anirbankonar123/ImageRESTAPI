@@ -11,7 +11,7 @@ def base64str_to_PILImage(base64str):
    base64bytes = base64.b64decode(base64_img_bytes)
    bytesObj = io.BytesIO(base64bytes)
    img = Image.open(bytesObj)
-   img.save("tmp1.jpg")
+   img.save("tmp1.png")
    return img
 
 

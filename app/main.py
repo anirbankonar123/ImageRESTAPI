@@ -7,8 +7,6 @@ from app import data_models
 from utils import image_utils
 import base64
 from typing import Union
-import numpy as np
-import cv2
 
 app = FastAPI()
 
@@ -53,6 +51,7 @@ async def image_api(input:data_models.Input,input_format: Union[str, None] = Non
     output.processedImage = base64str
 
     return output
+
 
 if __name__ == "__main__":
     uvicorn.run('main:app', host='0.0.0.0', port=8000, reload=False, root_path="/")
